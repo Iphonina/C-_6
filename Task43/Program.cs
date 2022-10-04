@@ -11,8 +11,18 @@ double b1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите значение b2: ");
 double b2 = Convert.ToInt32(Console.ReadLine());
 
-double x = Math.Round(((b2 - b1) / (k1 - k2)), 2);
-double y = Math.Round((k1 * x + b1), 2);
+if(k1 == k2)
+{
+    if(b1 == b2) Console.WriteLine("Прямые совпадают!");
+    else Console.WriteLine("Прямые параллельны, не пересекаются!");
+}
+else 
+{
+    double x = Math.Round(((b2 - b1) / (k1 - k2)), 2);
+    double y = Math.Round((k1 * x + b1), 2);
+    Console.WriteLine($"Координаты точки пересечения двух прямых ({x}; {y})");
+}
 
 
-Console.WriteLine($"Координаты точки пересечения двух прямых ({x}; {y})");
+
+
